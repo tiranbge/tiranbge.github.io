@@ -30,7 +30,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
 <meta property="article:published_time" content="2025-06-25T08:55:30.000Z">
-<meta property="article:modified_time" content="2025-06-25T09:44:19.073Z">
+<meta property="article:modified_time" content="2025-06-25T10:40:03.686Z">
 <meta property="article:author" content="tiran">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/redefine-og.webp">
@@ -248,7 +248,7 @@
         <div class="label text-third-text-color text-sm">分类</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">2</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">3</div>
         <div class="label text-third-text-color text-sm">文章</div>
     </a>
 </div>
@@ -299,8 +299,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-06-25 17:44:19</span>
-            <span class="mobile">2025-06-25 17:44:19</span>
+            <span class="desktop">2025-06-25 18:40:03</span>
+            <span class="mobile">2025-06-25 18:40:03</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -866,6 +866,7 @@
 <h3 id="极限字符rce"><a href="#极限字符rce" class="headerlink" title="极限字符rce"></a>极限字符rce</h3><p>解析见<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_63928796/article/details/127963079" >CTFshow-RCE极限大挑战_ctfshow rce-CSDN博客<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
 <p>有现成脚本<a class="link"   target="_blank" rel="noopener" href="https://github.com/ProbiusOfficial/bashFuck" >ProbiusOfficial&#x2F;bashFuck: exec BashCommand with only ! # $ ‘ ( ) &lt; \ { } just 10 charset used in Bypass or CTF<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
 <p>在线网站<a class="link"   target="_blank" rel="noopener" href="https://probiusofficial.github.io/bashFuck/" >BashFuck Payload Generator<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p>&#x3D;&#x3D;注意&#x3D;&#x3D;：必须为命令执行函数包裹像<code>system()</code>,不能是<code>eval()</code>，因为其本质是shell命令</p>
 <h2 id="无参数rce"><a href="#无参数rce" class="headerlink" title="无参数rce"></a>无参数rce</h2><p><strong>相关函数</strong></p>
 <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">scandir() :将返回当前目录中的所有文件和目录的列表。返回的结果是一个数组，其中包含当前目录下的所有文件和目录名称（glob()可替换）</span><br><span class="line">localeconv() ：返回一包含本地数字及货币格式信息的数组。（但是这里数组第一项就是‘.’，这个.的用处很大）</span><br><span class="line">current() ：返回数组中的单元，默认取第一个值。pos()和current()是同一个东西</span><br><span class="line">getcwd() :取得当前工作目录</span><br><span class="line">dirname():函数返回路径中的目录部分</span><br><span class="line">array_flip() :交换数组中的键和值，成功时返回交换后的数组</span><br><span class="line">array_rand() :从数组中随机取出一个或多个单元</span><br><span class="line"></span><br><span class="line">array_reverse():将数组内容反转</span><br><span class="line"></span><br><span class="line">strrev():用于反转给定字符串</span><br><span class="line"></span><br><span class="line">getcwd()：获取当前工作目录路径</span><br><span class="line"></span><br><span class="line">dirname() ：函数返回路径中的目录部分。</span><br><span class="line">chdir() ：函数改变当前的目录。</span><br><span class="line"></span><br><span class="line">eval()、assert()：命令执行</span><br><span class="line"></span><br><span class="line">读文件</span><br><span class="line">show_source() - 对文件进行语法高亮显示。</span><br><span class="line">readfile() - 输出一个文件。</span><br><span class="line">highlight_file() - 对文件进行语法高亮显示。</span><br><span class="line">file_get_contents() - 把整个文件读入一个字符串中。</span><br><span class="line">readgzfile() - 可用于读取非 gzip 格式的文件</span><br><span class="line"></span><br><span class="line">目录操作：</span><br><span class="line">getchwd() ：函数返回当前工作目录。</span><br><span class="line">scandir() ：函数返回指定目录中的文件和目录的数组。</span><br><span class="line">dirname() ：函数返回路径中的目录部分。</span><br><span class="line">chdir() ：函数改变当前的目录。</span><br><span class="line"></span><br><span class="line">数组相关的操作：</span><br><span class="line">end() - 将内部指针指向数组中的最后一个元素，并输出。</span><br><span class="line">next() - 将内部指针指向数组中的下一个元素，并输出。</span><br><span class="line">prev() - 将内部指针指向数组中的上一个元素，并输出。</span><br><span class="line">reset() - 将内部指针指向数组中的第一个元素，并输出。</span><br><span class="line">each() - 返回当前元素的键名和键值，并将内部指针向前移动。</span><br><span class="line">array_shift() - 删除数组中第一个元素，并返回被删除元素的值。</span><br></pre></td></tr></table></figure></div>
 
@@ -936,7 +937,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2025-06-25 17:44:19
+                    :</strong> 2025-06-25 18:40:03
             </li>
         
         <li>
@@ -964,6 +965,18 @@
 
 		
 		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="prev" rel="prev" href="/2025/06/25/SQL%E6%B3%A8%E5%85%A5%E6%B1%87%E6%80%BB/">
+					<span class="left arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-left"></i>
+					</span>
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">SQL注入汇总</span>
+						<span class="post-nav-item">上一篇</span>
+					</span>
+				</a>
+			</div>
 			
 			
 			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
@@ -1018,7 +1031,7 @@
                 
                 <p class="post-count space-x-0.5">
                     <span>
-                        共撰写了 2 篇文章
+                        共撰写了 3 篇文章
                     </span>
                     
                 </p>
