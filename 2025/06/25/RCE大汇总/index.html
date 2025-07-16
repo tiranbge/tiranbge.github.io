@@ -140,7 +140,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
 <meta property="article:published_time" content="2025-06-25T08:55:30.000Z">
-<meta property="article:modified_time" content="2025-06-30T15:46:17.956Z">
+<meta property="article:modified_time" content="2025-07-16T04:05:37.306Z">
 <meta property="article:author" content="tiran">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/redefine-og.webp">
@@ -409,8 +409,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-06-30 23:46:17</span>
-            <span class="mobile">2025-06-30 23:46:17</span>
+            <span class="desktop">2025-07-16 12:05:37</span>
+            <span class="mobile">2025-07-16 12:05:37</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -441,53 +441,53 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250623190602169.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250623190602169.png"
                      
                 ></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250623195308199.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250623195308199.png"
                       alt="image-20250623195307909"
                 ></p>
 <h2 id="文件名被过滤怎么绕过"><a href="#文件名被过滤怎么绕过" class="headerlink" title="文件名被过滤怎么绕过"></a>文件名被过滤怎么绕过</h2><h3 id="通配符文件"><a href="#通配符文件" class="headerlink" title="*通配符文件"></a><code>*</code>通配符文件</h3><p>在Linux中<code>f*</code>可以代表所有f开头的文件，所以我们可以用<code>cat /f*</code>获得flag</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250623193144626.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250623193144626.png"
                      
                 ></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250623195343709.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250623195343709.png"
                      
                 ></p>
 <h3 id="匹配文件名"><a href="#匹配文件名" class="headerlink" title="?匹配文件名"></a><code>?</code>匹配文件名</h3><p>比如我们知道flag的名字就是flag，但是可能flag这个字符串被过滤了，我们就可以用?匹配被ban的字符，用cat &#x2F;f???获得flag</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250623193329955.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250623193329955.png"
                      
                 ></p>
 <p>当然，前面不加这个f可以吗如&#x2F;????，也是可以的，就是容易被干扰，因为匹配任何四字符的文件</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250623193555342.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250623193555342.png"
                      
                 ></p>
 <h3 id="正则匹配"><a href="#正则匹配" class="headerlink" title="正则匹配"></a>正则匹配</h3><p>linux里可以用<code>[a-l]</code>这种形式匹配ascii码在9到q之间的字符，自然<code>cat /[a-l][a-l][a-l][a-l]</code>就等效于cat &#x2F;flag了</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250623194623207.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250623194623207.png"
                      
                 ></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250623195230897.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250623195230897.png"
                      
                 ></p>
 <p>ascii码中可视字符顺序如下</p>
@@ -497,21 +497,21 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250623195614478.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250623195614478.png"
                      
                 ></p>
 <h3 id="转进制"><a href="#转进制" class="headerlink" title="转进制"></a>转进制</h3><p>我们可以把flag转成各种进制。如八进制、十六进制，以八进制为例，变成<code>$&#39;\146\154\141\147&#39;</code>，然后用<code>cat /$&#39;\146\154\141\147&#39;</code>即可</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250623200051149.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250623200051149.png"
                      
                 ></p>
 <p>在php(Apache&#x2F;2.4.62 (Ubuntu) PHP 8.3.11)中不用$符</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250623200542984.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250623200542984.png"
                      
                 ></p>
 <h3 id="利用管道符"><a href="#利用管道符" class="headerlink" title="利用管道符"></a>利用管道符</h3><div class="code-container" data-rel="Cmd"><figure class="iseeu highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> &quot;Y2F0IC9mKg==&quot; | base64 -d|bash</span><br></pre></td></tr></table></figure></div>
@@ -519,7 +519,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250623202900383.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250623202900383.png"
                      
                 ></p>
 <p>如果对应环境有其他编码也可以换其他冷门点的编码</p>
@@ -527,28 +527,28 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250623203039088.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250623203039088.png"
                      
                 ></p>
 <p>显然我们需要获取第一个字符</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250623203139862.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250623203139862.png"
                      
                 ></p>
 <p><code>$&#123;PATH:0:1&#125;</code>第二个参数表示起始位置，第三个参数表示截取长度，所以可以构造出<code>cat $&#123;PATH:0:1&#125;flag</code></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250623203338673.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250623203338673.png"
                      
                 ></p>
 <p>当然不止PATH一个，我们可以查看环境变量（但是比赛都基本上启docker，没我那么多环境变量，但是像PWD，HOME，SHELL还是有的）</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250623203648840.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250623203648840.png"
                      
                 ></p>
 <p><code>$&#123;PWD:0:1&#125;、$&#123;HOME:0:1&#125;、$&#123;SHELL:0:1&#125;</code></p>
@@ -562,27 +562,27 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250623204321319.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250623204321319.png"
                      
                 ></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250623204423890.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250623204423890.png"
                      
                 ></p>
 <h3 id="特殊变量"><a href="#特殊变量" class="headerlink" title="特殊变量"></a>特殊变量</h3><p>特殊变量 <code>$1</code>到<code>$9</code>， <code>$a</code>到<code>$z</code>，<code>$@</code>和<code>$*</code> ，这些变量输出值为空 例如： <code>c$9at /fl$9ag</code></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250623211805717.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250623211805717.png"
                      
                 ></p>
 <h3 id="变量拼接"><a href="#变量拼接" class="headerlink" title="变量拼接"></a>变量拼接</h3><p><code>cat /flag</code>替换为：<code>a=at;b=ag;c$a /fl$b</code></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250623212049758.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250623212049758.png"
                      
                 ></p>
 <h2 id="各种读取文件的方法"><a href="#各种读取文件的方法" class="headerlink" title="各种读取文件的方法"></a>各种读取文件的方法</h2><h3 id="cat，tac，nl"><a href="#cat，tac，nl" class="headerlink" title="cat，tac，nl"></a>cat，tac，nl</h3><p>最最常见的3钟，都不需要完整文件名</p>
@@ -598,7 +598,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624134612166.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624134612166.png"
                      
                 ></p>
 <h3 id="more-bzmore"><a href="#more-bzmore" class="headerlink" title="more&#x2F;bzmore"></a>more&#x2F;bzmore</h3><p>类似cat命令，会以一页一页的显示，方便使用者逐页阅读，用法为：</p>
@@ -608,7 +608,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624134642920.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624134642920.png"
                      
                 ></p>
 <h3 id="less-bzless"><a href="#less-bzless" class="headerlink" title="less&#x2F;bzless"></a>less&#x2F;bzless</h3><p>作用与more类似,都用来浏览文本文件中的内容,不同之处在于,使用 more 命令浏览文件内容时,只能不断向后翻看,而使用 less 命令浏览,既可以向后翻看,也可以向前看。用法为：</p>
@@ -618,13 +618,13 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624134940436.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624134940436.png"
                      
                 ></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624134919295.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624134919295.png"
                      
                 ></p>
 <h3 id="head，tail"><a href="#head，tail" class="headerlink" title="head，tail"></a>head，tail</h3><p>都不需要完整文件名</p>
@@ -637,7 +637,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624135017511.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624135017511.png"
                      
                 ></p>
 <h3 id="sed"><a href="#sed" class="headerlink" title="sed"></a>sed</h3><p>Sed 代表流编辑器Stream Editor，常用于 Linux 中基本的文本处理.用法为：</p>
@@ -647,7 +647,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624135048875.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624135048875.png"
                      
                 ></p>
 <h3 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h3><p>用于将文本文件内容加以排序。用法为：</p>
@@ -657,7 +657,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624135103290.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624135103290.png"
                      
                 ></p>
 <h3 id="uniq"><a href="#uniq" class="headerlink" title="uniq"></a>uniq</h3><p>删除文件中的连续重复行 如果你在不使用任何参数的情况下使用 uniq 命令,它将删除所有连续的重复行,只显示唯一的行。用法为：</p>
@@ -667,7 +667,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624135123951.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624135123951.png"
                      
                 ></p>
 <h3 id="rev"><a href="#rev" class="headerlink" title="rev"></a>rev</h3><p>反转一个或多个文件的行。用法为</p>
@@ -678,7 +678,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624135149731.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624135149731.png"
                      
                 ></p>
 <h3 id="od"><a href="#od" class="headerlink" title="od"></a>od</h3><p>od(Octal Dump)命令用于将指定文件内容以八进制、十进制、十六进制、浮点格式或 ASCII 编码字符方式显示,系统默认的显示方式是八进制。用法为：</p>
@@ -688,21 +688,21 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624135238634.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624135238634.png"
                      
                 ></p>
 <p>你可能会奇怪中间那个0000020是啥，我们可以看到这个命令在linux里的运行结果：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624135218428.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624135218428.png"
                      
                 ></p>
 <p>左边一列其实是它的地址，记得把地址0000020删了就是文件内容了，当然直接f12也可以看到linux里那样的运行结果：</p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624135320789.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624135320789.png"
                      
                 ></p>
 <h3 id="vim-vi"><a href="#vim-vi" class="headerlink" title="vim&#x2F;vi"></a>vim&#x2F;vi</h3><p>这俩都是Linux里的文件编辑器，我们在网页直接用system(“vim &#x2F;f*”);虽然不会进入编辑模式但还是可以看到里面的内容。用法为:</p>
@@ -712,13 +712,13 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624135414120.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624135414120.png"
                      
                 ></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624135444808.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624135444808.png"
                      
                 ></p>
 <h3 id="man"><a href="#man" class="headerlink" title="man"></a>man</h3><p>man 命令是 Linux 下的帮助指令，通过 man 指令可以查看 Linux 中的指令帮助、配置文件帮助和编程帮助等信息，类似于vim&#x2F;vi，直接对文本运行可以看到文本内容。用法为：</p>
@@ -728,7 +728,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624135517308.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624135517308.png"
                      
                 ></p>
 <h3 id="paste"><a href="#paste" class="headerlink" title="paste"></a>paste</h3><p>使用paste命令可以将每个指定文件里的每一行整合到对应一行里写到标准输出,之间用制表符分隔。用法为：</p>
@@ -738,7 +738,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624135537804.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624135537804.png"
                      
                 ></p>
 <h3 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h3><p>查找文件里符合条件的字符串。用法为：</p>
@@ -748,7 +748,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624135555829.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624135555829.png"
                      
                 ></p>
 <h3 id="file"><a href="#file" class="headerlink" title="file"></a>file</h3><p>查看文件信息或类型。用法为：</p>
@@ -758,7 +758,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624135615857.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624135615857.png"
                      
                 ></p>
 <h3 id="dd"><a href="#dd" class="headerlink" title="dd"></a>dd</h3><p>用于读取、转换并输出数据。用法为：</p>
@@ -768,7 +768,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624135631505.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624135631505.png"
                      
                 ></p>
 <h3 id="date"><a href="#date" class="headerlink" title="date"></a>date</h3><p>使用指定格式显示时间，或者设置系统时间，有时用于suid提权。用法为：</p>
@@ -777,7 +777,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624135652718.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624135652718.png"
                      
                 ></p>
 <p>不需要完整文件名。但他本质上是一种报错读取，直接system传值是没回显的，我们要读取报错才行：</p>
@@ -786,7 +786,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624135752621.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624135752621.png"
                      
                 ></p>
 <h3 id="报错读取"><a href="#报错读取" class="headerlink" title="报错读取"></a>报错读取</h3><p>linux里可以用点号执行shell脚本，同样，我们也可以用这种方法报错读取文件内容，前提是你的用户组有<strong>读取文件的权限</strong></p>
@@ -798,7 +798,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624152216428.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624152216428.png"
                      
                 ></p>
 <h3 id="diff"><a href="#diff" class="headerlink" title="diff"></a>diff</h3><p>用于比较文件的内容，我们可以把想读取的文件内容和一个已知的文件进行比较，获得差集也就是我们想要的内容了，如：</p>
@@ -808,7 +808,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624152237710.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624152237710.png"
                      
                 ></p>
 <h2 id="系统命令执行函数"><a href="#系统命令执行函数" class="headerlink" title="系统命令执行函数"></a>系统命令执行函数</h2><h3 id="system"><a href="#system" class="headerlink" title="system()"></a>system()</h3><p>&#x3D;&#x3D;作用&#x3D;&#x3D;：同 C 版本的 <strong>system()</strong> 函数一样，本函数执行<code>command</code> 参数所指定的命令，<strong>&#x3D;&#x3D;并且输出执行结果&#x3D;&#x3D;</strong>。如果 PHP 运行在服务器模块中，<strong>system()</strong> 函数还会尝试在每行输出完毕之后，自动刷新 web 服务器的输出缓存。如果 PHP 运行在服务器模块中，<strong>system()</strong> 函数还会尝试在每行输出完毕之后，自动刷新 web 服务器的输出缓存。</p>
@@ -818,7 +818,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624154459017.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624154459017.png"
                      
                 ></p>
 <h3 id="passthru"><a href="#passthru" class="headerlink" title="passthru()"></a>passthru()</h3><p>&#x3D;&#x3D;作用&#x3D;&#x3D;：执行外部程序**&#x3D;&#x3D;并且显示原始输出&#x3D;&#x3D;**。同 <strong>exec()</strong> 函数类似， <strong>passthru()</strong> 函数 也是用来执行外部命令（<code>command</code>）的。 当所执行的 Unix 命令输出二进制数据， 并且需要直接传送到浏览器的时候， 需要用此函数来替代 <a class="link"   target="_blank" rel="noopener" href="https://www.php.net/manual/zh/function.exec.php" >exec()<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 或 <a class="link"   target="_blank" rel="noopener" href="https://www.php.net/manual/zh/function.system.php" >system()<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 函数。 常用来执行诸如 pbmplus 之类的可以直接输出图像流的命令。 通过设置 Content-type 为 <code>image/gif</code>， 然后调用 pbmplus 程序输出 gif 文件， 就可以从 PHP 脚本中直接输出图像到浏览器。</p>
@@ -828,7 +828,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624154923811.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624154923811.png"
                      
                 ></p>
 <h3 id="exec"><a href="#exec" class="headerlink" title="exec()"></a>exec()</h3><p>&#x3D;&#x3D;作用&#x3D;&#x3D;：执行一个外部程序。<strong>exec()</strong> 执行 <code>command</code> 参数所指定的命令。返回命令执行结果的最后一行内容。（言外之意就是不显示，就算使用echo输出也是输出最后一行）</p>
@@ -838,7 +838,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624155317700.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624155317700.png"
                      
                 ></p>
 <h3 id="shell-exec"><a href="#shell-exec" class="headerlink" title="shell_exec()"></a>shell_exec()</h3><p>&#x3D;&#x3D;作用&#x3D;&#x3D;：通过 shell 执行命令并将完整的输出以字符串的方式返回（依旧不显示，需要echo输出）</p>
@@ -848,7 +848,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624155618846.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624155618846.png"
                      
                 ></p>
 <h3 id="pcntl-exec"><a href="#pcntl-exec" class="headerlink" title="pcntl_exec()"></a>pcntl_exec()</h3><p>&#x3D;&#x3D;作用&#x3D;&#x3D;：在当前进程空间执行指定程序。以给定参数执行程序。经常用于<strong>disable_functions</strong>绕过，后面单开文章</p>
@@ -859,13 +859,13 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624162507258.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624162507258.png"
                      
                 ></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624162521550.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624162521550.png"
                      
                 ></p>
 <h3 id="反引号"><a href="#反引号" class="headerlink" title="反引号&#96;&#96;"></a>反引号&#96;&#96;</h3><p>&#x3D;&#x3D;作用&#x3D;&#x3D;：PHP 支持一个执行运算符：反引号。注意这不是单引号！PHP 将尝试将反引号中的内容作为 shell 命令来执行，并将其输出信息返回（即，可以赋给一个变量而不是简单地丢弃到标准输出）。使用反引号运算符“&#96;”的效果与函数<strong>shell_exec</strong>相同。</p>
@@ -875,7 +875,7 @@
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="https://cdn.jsdelivr.net/gh/tiranbge/picture/20250624163703336.png"
+                     data-src="https://testingcf.jsdelivr.net/gh/tiranbge/picture/20250624163703336.png"
                      
                 ></p>
 <h2 id="代码执行函数"><a href="#代码执行函数" class="headerlink" title="代码执行函数"></a>代码执行函数</h2><h3 id="eval"><a href="#eval" class="headerlink" title="eval()"></a>eval()</h3><p>&#x3D;&#x3D;作用&#x3D;&#x3D;：把字符串作为PHP代码执行，把指定 <code>code</code> 作为 PHP 代码执行。正在执行的代码继承调用 <strong>eval()</strong> 所在行的<strong>变量作用域</strong>。该行中任何有效变量都可在执行的代码中读取和修改。但定义的所有函数和类都将在全局命名空间中定义。换句话说，编译器将执行的代码视为单独 <em><strong>included</strong></em>后的文件。<strong>代码执行的作用域是调用 <em>eval()</em> 处的作用域。因此，<em>eval()</em> 里任何的变量定义、修改，都会在函数结束后被保留。</strong></p>
@@ -1054,7 +1054,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2025-06-30 23:46:17
+                    :</strong> 2025-07-16 12:05:37
             </li>
         
         <li>
